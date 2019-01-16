@@ -6,8 +6,8 @@ const username = 'Ana'
 const usernameJson = {
   'username': 'Ana'
 }
- 
-const unorderedList = '{1,15,5,7,3}'; 
+
+const unorderedList = '{1,15,5,7,3}';
 const orderedList = '{15,7,3,5,1}';
 
 describe('Welcome endpoint validation', () => {
@@ -24,7 +24,7 @@ describe('Welcome endpoint validation', () => {
 })
 
 describe('Order Lists endpoint validation', () => {
-  test('Order List', async ()=>{
+  test('Order List', async () => {
     const response = await request(app).get(`/orderList?list=${unorderedList}`)
     expect(response.statusCode).toBe(200)
     expect(response.text).toEqual(orderedList)

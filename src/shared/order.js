@@ -14,10 +14,8 @@ const countBinInt = (list) => {
     //separate the numbers and format them
     let arr = res.split(',').map(num => parseInt(num, 10));
 
-    let binArr = arr.map(a => a.toString(2));
-
     //sort the number array
-    arr.sort( (a, b) => {
+    arr.sort((a, b) => {
       if (a.toString(2).split("1").length - 1 < b.toString(2).split("1").length - 1) {
         return 1;
       } else if (a.toString(2).split("1").length - 1 > b.toString(2).split("1").length - 1) {
@@ -37,5 +35,5 @@ const countBinInt = (list) => {
 }
 
 module.exports = {
-    countBinInt
+  countBinInt
 }
